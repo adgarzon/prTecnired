@@ -1,0 +1,4 @@
+﻿C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaEntidades\clsCliente.cs
+C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaEntidades\clsEmpleado.cs
+C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaEntidades\clsFactura.cs
+C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaEntidades\clsProducto.cs

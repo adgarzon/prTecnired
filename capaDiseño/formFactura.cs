@@ -39,21 +39,31 @@ namespace capaDiseño
 
         private void btnBuscarEmpleado_Click(object sender, EventArgs e)
         {
-            DataTable tabla = logicaPrograma.buscarEmpleado(txtCedEmpleado.Text);
-            if (tabla.Rows.Count != 0)
+            Boolean error = false;
+            var cadena = txtCedCliente.Text;
+            if (cadena.Length < 5)
             {
-                txtEmpleado.Text = Convert.ToString(tabla.Rows[0][1] + " " + tabla.Rows[0][2] + " " + tabla.Rows[0][3] + " " + tabla.Rows[0][4]);
-                
+                MessageBox.Show("La cedula debe ser mayor a 4 numeros");
+                error = true;
             }
-            else
-            {
-                MessageBox.Show("No existe este empleado");
+            if (!error) {
+                DataTable tabla = logicaPrograma.buscarEmpleado(txtCedEmpleado.Text);
+                if (tabla.Rows.Count != 0)
+                {
+                    txtEmpleado.Text = Convert.ToString(tabla.Rows[0][1] + " " + tabla.Rows[0][2] + " " + tabla.Rows[0][3] + " " + tabla.Rows[0][4]);
+
+                }
+                else
+                {
+                    MessageBox.Show("No existe este empleado");
+                }
             }
+            
         }
 
         private void txtCedEmpleado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 MessageBox.Show("debe ser numerico");
                 txtCedEmpleado.Text = "";
@@ -81,7 +91,7 @@ namespace capaDiseño
 
         private void txtCedCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 MessageBox.Show("debe ser numerico");
                 txtCedEmpleado.Text = "";
@@ -91,17 +101,27 @@ namespace capaDiseño
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            DataTable tabla = logicaPrograma.buscarCliente(txtCedCliente.Text);
-            if (tabla.Rows.Count != 0)
+            Boolean error = false;
+            var cadena = txtCedCliente.Text;
+            if (cadena.Length < 5)
             {
-                txtNombre.Text = Convert.ToString(tabla.Rows[0][1] + " " + tabla.Rows[0][2] + " " + tabla.Rows[0][3] + " " + tabla.Rows[0][4]);
-                txtDireccion.Text = Convert.ToString(tabla.Rows[0][5]);
-                txtCelular.Text = Convert.ToString(tabla.Rows[0][6]);
+                MessageBox.Show("La cedula debe ser mayor a 4 numeros");
+                error = true;
             }
-            else
-            {
-                MessageBox.Show("No existe este cliente");
+            if (!error) {
+                DataTable tabla = logicaPrograma.buscarCliente(txtCedCliente.Text);
+                if (tabla.Rows.Count != 0)
+                {
+                    txtNombre.Text = Convert.ToString(tabla.Rows[0][1] + " " + tabla.Rows[0][2] + " " + tabla.Rows[0][3] + " " + tabla.Rows[0][4]);
+                    txtDireccion.Text = Convert.ToString(tabla.Rows[0][5]);
+                    txtCelular.Text = Convert.ToString(tabla.Rows[0][6]);
+                }
+                else
+                {
+                    MessageBox.Show("No existe este cliente");
+                }
             }
+            
         }
 
         private void txtCodProducto_TextChanged(object sender, EventArgs e)
@@ -111,7 +131,7 @@ namespace capaDiseño
 
         private void txtCodProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 MessageBox.Show("debe ser numerico");
                 txtCedEmpleado.Text = "";
@@ -142,7 +162,7 @@ namespace capaDiseño
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            if (!char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 MessageBox.Show("debe ser numerico");
                 txtCedEmpleado.Text = "";
@@ -193,16 +213,18 @@ namespace capaDiseño
             int n = e.RowIndex;
             if (n != -1)
             {
-                txtCantidad.Text = Convert.ToString(dgvFactura.Rows[n].Cells[1].Value);
-                txtProducto.Text = Convert.ToString(dgvFactura.Rows[n].Cells[2].Value);
-                txtDescripcion.Text = Convert.ToString(dgvFactura.Rows[n].Cells[3].Value);
-                txtpCompra.Text = Convert.ToString(dgvFactura.Rows[n].Cells[4].Value);
+                txtCantidad.Text = Convert.ToString(dgvFactura.Rows[n].Cells[0].Value);
+                txtProducto.Text = Convert.ToString(dgvFactura.Rows[n].Cells[1].Value);
+                txtDescripcion.Text = Convert.ToString(dgvFactura.Rows[n].Cells[2].Value);
+                txtpCompra.Text = Convert.ToString(dgvFactura.Rows[n].Cells[3].Value);
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+          
             dgvFactura.Rows.Remove(dgvFactura.CurrentRow);
+            
         }
 
         private void btnVender_Click(object sender, EventArgs e)

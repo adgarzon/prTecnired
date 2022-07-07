@@ -1,0 +1,4 @@
+﻿C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaDatos\buscar.cs
+C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaDatos\eliminar.cs
+C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaDatos\guardar.cs
+C:\Users\PC\Documents\UPC\VI_SEMESTRE\ING_SOFTWARE_II\proyecto\prTecnired\capaDatos\listar.cs

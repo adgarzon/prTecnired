@@ -22,10 +22,18 @@ namespace capaDiseño
 
         }
         
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
+
+            registrarEmpleado();
+            
+        }
+        public respuesta registrarEmpleado()
+        {
+            
             clsEmpleado empleado = new clsEmpleado();
-            bool error = false;
+            respuesta respuesta = new respuesta();
+            bool error =  false;
             try
             {
                 Convert.ToInt64(txtSalario.Text);
@@ -33,15 +41,29 @@ namespace capaDiseño
             }
             catch (System.FormatException)
             {
-                MessageBox.Show("Los salario y celular deben ser numericos");
+                respuesta = new respuesta() { Code = 400, Message = "Campo salario y celular deben ser numericos" };
+                MessageBox.Show(respuesta.Message);
                 error = true;
+                //return respuesta;
             }
-            if (txtPnombre.Text == "" || 
-                txtPapellido.Text=="" ||
-                txtSapellido.Text==""
+            if (txtPnombre.Text == "" ||
+                txtPapellido.Text == "" ||
+                txtSapellido.Text == ""
                 )
             {
                 MessageBox.Show("Los campos primer nombre, primer apellido y segundo apellido no pueden estar vacios");
+                error = true;
+            }
+            var cad = txtCelular.Text;
+            var error2 = false;
+            if (cad.Length < 7)
+            {
+                error2 = true;
+                if (cad.Length == 0) { error2 = false; }
+            }
+            if (error2 == true)
+            {
+                MessageBox.Show("El campo celular debe ser mayor a 6 numeros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 error = true;
             }
             if (error == false)
@@ -55,12 +77,11 @@ namespace capaDiseño
                 empleado.Celular = txtCelular.Text;
 
                 logicaPrograma.guardarEmpleado(empleado);
-
+                respuesta = new respuesta() { Code = 200, Message = "registro exitoso" };
                 adicionarDgv();
                 limpiar();
             }
-            
-            
+            return respuesta;
         }
         private void adicionarDgv()
         {
@@ -106,6 +127,12 @@ namespace capaDiseño
                 MessageBox.Show("El campo cedula debe ser numerico");
                 txtCedula.Text = "";
                 txtCedula.Focus();
+                error = true;
+            }
+            var cadena = txtCedula.Text;
+            if (cadena.Length < 5)
+            {
+                MessageBox.Show("La cedula debe ser mayor a 4 numeros");
                 error = true;
             }
             if (!error)

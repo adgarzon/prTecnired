@@ -31,6 +31,12 @@ namespace capaDiseño
                 MessageBox.Show("la cedula debe ser valor numerico");
                 error = true;
             }
+            var cadena = txtCedula.Text;
+            if (cadena.Length < 5)
+            {
+                MessageBox.Show("La cedula debe ser mayor a 4 numeros");
+                error = true;
+            }
             if (error == false)
             {
                 DataTable tabla = logicaPrograma.buscarEmpleado(txtCedula.Text);
@@ -58,8 +64,8 @@ namespace capaDiseño
                 txtSnombre.Text = Convert.ToString(dgvConsulta.Rows[n].Cells[2].Value);
                 txtPapellido.Text = Convert.ToString(dgvConsulta.Rows[n].Cells[3].Value);
                 txtSapellido.Text = Convert.ToString(dgvConsulta.Rows[n].Cells[4].Value);
-                txtSalario.Text = Convert.ToString(dgvConsulta.Rows[n].Cells[5].Value);
-                txtCelular.Text = Convert.ToString(dgvConsulta.Rows[n].Cells[6].Value);
+                txtSalario.Text = Convert.ToString(dgvConsulta.Rows[n].Cells[6].Value);
+                txtCelular.Text = Convert.ToString(dgvConsulta.Rows[n].Cells[5].Value);
             }
             btnModEmpleado.Enabled = true;
             btnEliminarEmpleado.Enabled = true;
@@ -108,6 +114,18 @@ namespace capaDiseño
                 )
             {
                 MessageBox.Show("Los campos primer nombre, primer apellido y segundo apellido no pueden estar vacios");
+                error = true;
+            }
+            var cad = txtCelular.Text;
+            var error2 = false;
+            if (cad.Length < 7)
+            {
+                error2 = true;
+                if (cad.Length == 0) { error2 = false; }
+            }
+            if (error2 == true)
+            {
+                MessageBox.Show("El campo celular debe ser mayor a 6 numeros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 error = true;
             }
             if (error == false)

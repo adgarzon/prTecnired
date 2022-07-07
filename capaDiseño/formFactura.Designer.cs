@@ -151,6 +151,7 @@ namespace capaDiseño
             // 
             // txtEmpleado
             // 
+            this.txtEmpleado.Enabled = false;
             this.txtEmpleado.Location = new System.Drawing.Point(609, 59);
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.Size = new System.Drawing.Size(267, 23);
@@ -219,6 +220,7 @@ namespace capaDiseño
             // 
             // txtTotal
             // 
+            this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(924, 339);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(108, 23);
@@ -235,6 +237,7 @@ namespace capaDiseño
             // 
             // txtVtotal
             // 
+            this.txtVtotal.Enabled = false;
             this.txtVtotal.Location = new System.Drawing.Point(619, 407);
             this.txtVtotal.Name = "txtVtotal";
             this.txtVtotal.Size = new System.Drawing.Size(108, 23);
@@ -242,6 +245,7 @@ namespace capaDiseño
             // 
             // txtpCompra
             // 
+            this.txtpCompra.Enabled = false;
             this.txtpCompra.Location = new System.Drawing.Point(619, 377);
             this.txtpCompra.Name = "txtpCompra";
             this.txtpCompra.Size = new System.Drawing.Size(108, 23);
@@ -250,6 +254,7 @@ namespace capaDiseño
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(619, 344);
+            this.txtCantidad.MaxLength = 3;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(53, 23);
             this.txtCantidad.TabIndex = 54;
@@ -257,6 +262,7 @@ namespace capaDiseño
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(619, 309);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(173, 23);
@@ -264,6 +270,7 @@ namespace capaDiseño
             // 
             // txtProducto
             // 
+            this.txtProducto.Enabled = false;
             this.txtProducto.Location = new System.Drawing.Point(619, 273);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(173, 23);
@@ -317,7 +324,10 @@ namespace capaDiseño
             // 
             // dtFecha
             // 
+            this.dtFecha.Enabled = false;
             this.dtFecha.Location = new System.Drawing.Point(609, 219);
+            this.dtFecha.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtFecha.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(221, 23);
             this.dtFecha.TabIndex = 46;
@@ -353,6 +363,7 @@ namespace capaDiseño
             // 
             // txtCelular
             // 
+            this.txtCelular.Enabled = false;
             this.txtCelular.Location = new System.Drawing.Point(609, 174);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(267, 23);
@@ -369,6 +380,7 @@ namespace capaDiseño
             // 
             // txtDireccion
             // 
+            this.txtDireccion.Enabled = false;
             this.txtDireccion.Location = new System.Drawing.Point(609, 131);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(267, 23);
@@ -402,6 +414,7 @@ namespace capaDiseño
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(609, 92);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(267, 23);
@@ -452,6 +465,7 @@ namespace capaDiseño
             // txtCodProducto
             // 
             this.txtCodProducto.Location = new System.Drawing.Point(152, 185);
+            this.txtCodProducto.MaxLength = 5;
             this.txtCodProducto.Name = "txtCodProducto";
             this.txtCodProducto.Size = new System.Drawing.Size(154, 23);
             this.txtCodProducto.TabIndex = 9;
@@ -461,6 +475,7 @@ namespace capaDiseño
             // txtCedCliente
             // 
             this.txtCedCliente.Location = new System.Drawing.Point(152, 118);
+            this.txtCedCliente.MaxLength = 10;
             this.txtCedCliente.Name = "txtCedCliente";
             this.txtCedCliente.Size = new System.Drawing.Size(154, 23);
             this.txtCedCliente.TabIndex = 8;
@@ -469,6 +484,7 @@ namespace capaDiseño
             // txtCedEmpleado
             // 
             this.txtCedEmpleado.Location = new System.Drawing.Point(152, 56);
+            this.txtCedEmpleado.MaxLength = 10;
             this.txtCedEmpleado.Name = "txtCedEmpleado";
             this.txtCedEmpleado.Size = new System.Drawing.Size(154, 23);
             this.txtCedEmpleado.TabIndex = 7;

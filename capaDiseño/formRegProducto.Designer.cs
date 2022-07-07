@@ -43,7 +43,6 @@ namespace capaDiseño
             this.txtDes = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.txtPventa = new System.Windows.Forms.TextBox();
             this.txtPcompra = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@ namespace capaDiseño
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPventa = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -166,6 +166,7 @@ namespace capaDiseño
             // txtDes
             // 
             this.txtDes.Location = new System.Drawing.Point(156, 172);
+            this.txtDes.MaxLength = 200;
             this.txtDes.Name = "txtDes";
             this.txtDes.Size = new System.Drawing.Size(164, 23);
             this.txtDes.TabIndex = 33;
@@ -182,20 +183,15 @@ namespace capaDiseño
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(156, 303);
+            this.txtCantidad.MaxLength = 3;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(110, 23);
             this.txtCantidad.TabIndex = 31;
             // 
-            // txtPventa
-            // 
-            this.txtPventa.Location = new System.Drawing.Point(156, 263);
-            this.txtPventa.Name = "txtPventa";
-            this.txtPventa.Size = new System.Drawing.Size(110, 23);
-            this.txtPventa.TabIndex = 30;
-            // 
             // txtPcompra
             // 
             this.txtPcompra.Location = new System.Drawing.Point(156, 222);
+            this.txtPcompra.MaxLength = 9;
             this.txtPcompra.Name = "txtPcompra";
             this.txtPcompra.Size = new System.Drawing.Size(110, 23);
             this.txtPcompra.TabIndex = 29;
@@ -203,6 +199,7 @@ namespace capaDiseño
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(156, 116);
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(164, 23);
             this.txtNombre.TabIndex = 28;
@@ -273,6 +270,14 @@ namespace capaDiseño
             this.label1.TabIndex = 20;
             this.label1.Text = "REGISTRAR UN PRODUCTO";
             // 
+            // txtPventa
+            // 
+            this.txtPventa.Location = new System.Drawing.Point(156, 263);
+            this.txtPventa.MaxLength = 9;
+            this.txtPventa.Name = "txtPventa";
+            this.txtPventa.Size = new System.Drawing.Size(110, 23);
+            this.txtPventa.TabIndex = 30;
+            // 
             // formRegProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -300,7 +305,6 @@ namespace capaDiseño
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.TextBox txtPventa;
         private System.Windows.Forms.TextBox txtPcompra;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDes;
@@ -315,5 +319,6 @@ namespace capaDiseño
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.TextBox txtPventa;
     }
 }

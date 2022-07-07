@@ -152,6 +152,7 @@ namespace capaDiseño
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(815, 208);
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(164, 23);
             this.txtNombre.TabIndex = 49;
@@ -159,6 +160,7 @@ namespace capaDiseño
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(815, 253);
+            this.txtDesc.MaxLength = 200;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(164, 23);
             this.txtDesc.TabIndex = 48;
@@ -166,6 +168,7 @@ namespace capaDiseño
             // txtPcompra
             // 
             this.txtPcompra.Location = new System.Drawing.Point(815, 296);
+            this.txtPcompra.MaxLength = 6;
             this.txtPcompra.Name = "txtPcompra";
             this.txtPcompra.Size = new System.Drawing.Size(164, 23);
             this.txtPcompra.TabIndex = 47;
@@ -173,6 +176,7 @@ namespace capaDiseño
             // txtPventa
             // 
             this.txtPventa.Location = new System.Drawing.Point(815, 339);
+            this.txtPventa.MaxLength = 6;
             this.txtPventa.Name = "txtPventa";
             this.txtPventa.Size = new System.Drawing.Size(164, 23);
             this.txtPventa.TabIndex = 46;
@@ -180,6 +184,7 @@ namespace capaDiseño
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(815, 384);
+            this.txtCantidad.MaxLength = 3;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(164, 23);
             this.txtCantidad.TabIndex = 45;
@@ -187,6 +192,7 @@ namespace capaDiseño
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(109, 85);
+            this.txtId.MaxLength = 5;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(178, 23);
             this.txtId.TabIndex = 43;

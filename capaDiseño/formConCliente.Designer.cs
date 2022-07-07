@@ -88,6 +88,7 @@ namespace capaDiseño
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(815, 389);
+            this.txtDireccion.MaxLength = 20;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(164, 23);
             this.txtDireccion.TabIndex = 44;
@@ -163,6 +164,7 @@ namespace capaDiseño
             // txtPnombre
             // 
             this.txtPnombre.Location = new System.Drawing.Point(815, 208);
+            this.txtPnombre.MaxLength = 10;
             this.txtPnombre.Name = "txtPnombre";
             this.txtPnombre.Size = new System.Drawing.Size(164, 23);
             this.txtPnombre.TabIndex = 49;
@@ -170,6 +172,7 @@ namespace capaDiseño
             // txtSnombre
             // 
             this.txtSnombre.Location = new System.Drawing.Point(815, 253);
+            this.txtSnombre.MaxLength = 10;
             this.txtSnombre.Name = "txtSnombre";
             this.txtSnombre.Size = new System.Drawing.Size(164, 23);
             this.txtSnombre.TabIndex = 48;
@@ -177,6 +180,7 @@ namespace capaDiseño
             // txtPapellido
             // 
             this.txtPapellido.Location = new System.Drawing.Point(815, 296);
+            this.txtPapellido.MaxLength = 10;
             this.txtPapellido.Name = "txtPapellido";
             this.txtPapellido.Size = new System.Drawing.Size(164, 23);
             this.txtPapellido.TabIndex = 47;
@@ -184,6 +188,7 @@ namespace capaDiseño
             // txtSapellido
             // 
             this.txtSapellido.Location = new System.Drawing.Point(815, 339);
+            this.txtSapellido.MaxLength = 10;
             this.txtSapellido.Name = "txtSapellido";
             this.txtSapellido.Size = new System.Drawing.Size(164, 23);
             this.txtSapellido.TabIndex = 46;
@@ -191,6 +196,7 @@ namespace capaDiseño
             // txtCelular
             // 
             this.txtCelular.Location = new System.Drawing.Point(815, 431);
+            this.txtCelular.MaxLength = 10;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(164, 23);
             this.txtCelular.TabIndex = 45;
@@ -198,6 +204,7 @@ namespace capaDiseño
             // txtCedula
             // 
             this.txtCedula.Location = new System.Drawing.Point(109, 85);
+            this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(178, 23);
             this.txtCedula.TabIndex = 43;

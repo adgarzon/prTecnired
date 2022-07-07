@@ -43,6 +43,24 @@ namespace capaDiseño
                 MessageBox.Show("el campo nombre no pueden estar vacio");
                 error = true;
             }
+            if (error == false) {
+                if (Convert.ToInt64(txtPcompra.Text) < 0)
+                {
+                    MessageBox.Show("el campo precio de compra no puede ser menor a cero");
+                    error = true;
+                }
+                else if (Convert.ToInt64(txtPventa.Text) < 0)
+                {
+                    MessageBox.Show("el campo precio de venta no puede ser menor a cero");
+                    error = true;
+                }
+                else if (Convert.ToInt64(txtCantidad.Text) < 0)
+                {
+                    MessageBox.Show("el campo cantidad no puede ser menor a cero");
+                    error = true;
+                }
+            }
+            
             if (error == false)
             {
                 producto.Nombre = txtNombre.Text;

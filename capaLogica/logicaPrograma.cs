@@ -11,9 +11,9 @@ namespace capaLogica
     public class logicaPrograma
     {
         // EMPLEADO  ---------------------------------------------------------------------------
-        public static void guardarEmpleado(clsEmpleado obj)
+        public static bool guardarEmpleado(clsEmpleado obj)
         {
-            bool g = guardar.guardarEmpleado(obj);
+           return guardar.guardarEmpleado(obj);
         }
         public static List<clsEmpleado> listarEmpleado()
         {

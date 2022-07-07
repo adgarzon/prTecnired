@@ -176,6 +176,7 @@ namespace capaDiseño
             // txtPnombre
             // 
             this.txtPnombre.Location = new System.Drawing.Point(233, 151);
+            this.txtPnombre.MaxLength = 10;
             this.txtPnombre.Name = "txtPnombre";
             this.txtPnombre.Size = new System.Drawing.Size(164, 23);
             this.txtPnombre.TabIndex = 14;
@@ -185,6 +186,7 @@ namespace capaDiseño
             // 
             this.txtSnombre.Enabled = false;
             this.txtSnombre.Location = new System.Drawing.Point(233, 196);
+            this.txtSnombre.MaxLength = 10;
             this.txtSnombre.Name = "txtSnombre";
             this.txtSnombre.Size = new System.Drawing.Size(164, 23);
             this.txtSnombre.TabIndex = 13;
@@ -193,6 +195,7 @@ namespace capaDiseño
             // 
             this.txtPapellido.Enabled = false;
             this.txtPapellido.Location = new System.Drawing.Point(233, 239);
+            this.txtPapellido.MaxLength = 10;
             this.txtPapellido.Name = "txtPapellido";
             this.txtPapellido.Size = new System.Drawing.Size(164, 23);
             this.txtPapellido.TabIndex = 12;
@@ -202,6 +205,7 @@ namespace capaDiseño
             // 
             this.txtSapellido.Enabled = false;
             this.txtSapellido.Location = new System.Drawing.Point(233, 282);
+            this.txtSapellido.MaxLength = 10;
             this.txtSapellido.Name = "txtSapellido";
             this.txtSapellido.Size = new System.Drawing.Size(164, 23);
             this.txtSapellido.TabIndex = 11;
@@ -210,6 +214,7 @@ namespace capaDiseño
             // 
             this.txtCelular.Enabled = false;
             this.txtCelular.Location = new System.Drawing.Point(233, 327);
+            this.txtCelular.MaxLength = 10;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(164, 23);
             this.txtCelular.TabIndex = 10;
@@ -331,7 +336,6 @@ namespace capaDiseño
         private System.Windows.Forms.TextBox txtSapellido;
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtSalario;
-        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -349,5 +353,6 @@ namespace capaDiseño
         private System.Windows.Forms.DataGridViewTextBoxColumn sApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn salario;
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
+        public System.Windows.Forms.TextBox txtCedula;
     }
 }

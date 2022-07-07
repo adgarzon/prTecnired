@@ -38,7 +38,7 @@ namespace capaDiseño
             }
             catch (System.FormatException)
             {
-                MessageBox.Show("Los campos cedula, salario y celular deben ser numericos");
+                MessageBox.Show("Los campos cedula, y celular deben ser numericos");
                 error = true;
             }
             if (txtPnombre.Text == "" ||
@@ -48,6 +48,17 @@ namespace capaDiseño
             {
                 MessageBox.Show("Los campos primer nombre, primer apellido y segundo apellido no pueden estar vacios");
                 error = true;
+            }
+            var cad = txtCelular.Text;
+            var error2 = false;
+            if(cad.Length < 7)
+            {
+                error2 = true;
+                if (cad.Length == 0) { error2 = false; }
+            }
+            if (error2 == true) {
+                MessageBox.Show("El campo celular debe ser mayor a 6 numeros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                error = true; 
             }
             if (error == false)
             {
@@ -104,6 +115,12 @@ namespace capaDiseño
                 MessageBox.Show("El campo cedula debe ser numerico");
                 txtCedula.Text = "";
                 txtCedula.Focus();
+                error = true;
+            }
+            var cadena = txtCedula.Text;
+            if (cadena.Length < 5)
+            {
+                MessageBox.Show("La cedula debe ser mayor a 4 numeros");
                 error = true;
             }
             if (!error)
